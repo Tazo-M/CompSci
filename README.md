@@ -17,8 +17,8 @@ Working inside WSL via VS Code terminal.
 
 ## How to run files:
 
-gcc -std=c17 -Wall -Wextra -pedantic FILENAME.c -o NAME
-./NAME
+gcc -std=c17 -Wall -Wextra -pedantic src/FILENAME.c -o src/NAME
+src/NAME
 
 * gcc - compiler (alternative clang), use g++/clang++ for C++, 
 * -std=c17 - Compile using the C17 stabdard
@@ -30,5 +30,5 @@ gcc -std=c17 -Wall -Wextra -pedantic FILENAME.c -o NAME
 
 ## How to save files outputs:
 
-./hello | tee results/hello_output.txt
+src/NAME | tee results/NAME_output.txt
 
