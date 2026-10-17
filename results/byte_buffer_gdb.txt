@@ -1,0 +1,133 @@
+Starting program: /mnt/c/Users/tazom/Documents/Studies/Myself/CompSci/Repository/CompSci/src/byte_buffer 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 81357) exited normally]
+No stack.
+Breakpoint 1 at 0x5555555551d1
+Starting program: /mnt/c/Users/tazom/Documents/Studies/Myself/CompSci/Repository/CompSci/src/byte_buffer 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, 0x00005555555551d1 in main ()
+#0  0x00005555555551d1 in main ()
+Single stepping until exit from function main,
+which has no line number information.
+__libc_start_call_main (main=main@entry=0x5555555551c9 <main>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdc38) at ../sysdeps/nptl/libc_start_call_main.h:74
+warning: 74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory
+#0  __libc_start_call_main (main=main@entry=0x5555555551c9 <main>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdc38) at ../sysdeps/nptl/libc_start_call_main.h:74
+#1  0x00007ffff7c2a28b in __libc_start_main_impl (main=0x5555555551c9 <main>, argc=1, argv=0x7fffffffdc38, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffffffdc28) at ../csu/libc-start.c:360
+#2  0x0000555555555105 in _start ()
+__GI_exit (status=0) at ./stdlib/exit.c:137
+warning: 137	./stdlib/exit.c: No such file or directory
+#0  __GI_exit (status=0) at ./stdlib/exit.c:137
+#1  0x00007ffff7c2a1d1 in __libc_start_call_main (main=main@entry=0x5555555551c9 <main>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdc38) at ../sysdeps/nptl/libc_start_call_main.h:74
+#2  0x00007ffff7c2a28b in __libc_start_main_impl (main=0x5555555551c9 <main>, argc=1, argv=0x7fffffffdc38, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffffffdc28) at ../csu/libc-start.c:360
+#3  0x0000555555555105 in _start ()
+138	in ./stdlib/exit.c
+#0  __GI_exit (status=0) at ./stdlib/exit.c:138
+#1  0x00007ffff7c2a1d1 in __libc_start_call_main (main=main@entry=0x5555555551c9 <main>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdc38) at ../sysdeps/nptl/libc_start_call_main.h:74
+#2  0x00007ffff7c2a28b in __libc_start_main_impl (main=0x5555555551c9 <main>, argc=1, argv=0x7fffffffdc38, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffffffdc28) at ../csu/libc-start.c:360
+#3  0x0000555555555105 in _start ()
+0x00007ffff7c4792f in __run_exit_handlers (status=0, listp=0x7ffff7e04680 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at ./stdlib/exit.c:40
+40	in ./stdlib/exit.c
+Undefined command: "steo".  Try "help".
+41	in ./stdlib/exit.c
+0x00007ffff7c476fa in __GI___call_tls_dtors () at ./stdlib/cxa_thread_atexit_impl.c:149
+warning: 149	./stdlib/cxa_thread_atexit_impl.c: No such file or directory
+__run_exit_handlers (status=0, listp=0x7ffff7e04680 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at ./stdlib/exit.c:43
+warning: 43	./stdlib/exit.c: No such file or directory
+Continuing.
+[Inferior 1 (process 81478) exited normally]
+No stack.
+Breakpoint 2 at 0x55555555520d
+Starting program: /mnt/c/Users/tazom/Documents/Studies/Myself/CompSci/Repository/CompSci/src/byte_buffer 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, 0x00005555555551d1 in main ()
+Single stepping until exit from function main,
+which has no line number information.
+
+Breakpoint 2, 0x000055555555520d in byte_buffer ()
+Single stepping until exit from function byte_buffer,
+which has no line number information.
+0x00007ffff7cad764 in __GI___libc_malloc (bytes=40) at ./malloc/malloc.c:3301
+warning: 3301	./malloc/malloc.c: No such file or directory
+3302	in ./malloc/malloc.c
+ptmalloc_init () at ./malloc/arena.c:264
+warning: 264	./malloc/arena.c: No such file or directory
+Continuing.
+[Inferior 1 (process 82230) exited normally]
+No stack.
+Starting program: /mnt/c/Users/tazom/Documents/Studies/Myself/CompSci/Repository/CompSci/src/byte_buffer 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, 0x00005555555551d1 in main ()
+Single stepping until exit from function main,
+which has no line number information.
+
+Breakpoint 2, 0x000055555555520d in byte_buffer ()
+#0  0x000055555555520d in byte_buffer ()
+#1  0x00005555555551df in main ()
+Single stepping until exit from function byte_buffer,
+which has no line number information.
+0x00007ffff7cad764 in __GI___libc_malloc (bytes=40) at ./malloc/malloc.c:3301
+warning: 3301	./malloc/malloc.c: No such file or directory
+#0  0x00007ffff7cad764 in __GI___libc_malloc (bytes=40) at ./malloc/malloc.c:3301
+#1  0x0000555555555244 in byte_buffer ()
+#2  0x00005555555551df in main ()
+3302	in ./malloc/malloc.c
+ptmalloc_init () at ./malloc/arena.c:264
+warning: 264	./malloc/arena.c: No such file or directory
+ptmalloc_init () at ./malloc/arena.c:262
+262	in ./malloc/arena.c
+#0  ptmalloc_init () at ./malloc/arena.c:262
+#1  0x00007ffff7cad965 in ptmalloc_init () at ./malloc/arena.c:264
+#2  __GI___libc_malloc (bytes=40) at ./malloc/malloc.c:3302
+#3  0x0000555555555244 in byte_buffer ()
+#4  0x00005555555551df in main ()
+270	in ./malloc/arena.c
+tcache_key_initialize () at ./malloc/malloc.c:3143
+warning: 3143	./malloc/malloc.c: No such file or directory
+0x00007ffff7ca9e51 in __getrandom_nocancel_nostatus (flags=<optimized out>, buflen=<optimized out>, buf=<optimized out>) at ../sysdeps/unix/sysv/linux/not-cancel.h:97
+warning: 97	../sysdeps/unix/sysv/linux/not-cancel.h: No such file or directory
+warning: 267	./malloc/arena.c: No such file or directory
+270	in ./malloc/arena.c
+tcache_key_initialize () at ./malloc/malloc.c:3143
+warning: 3143	./malloc/malloc.c: No such file or directory
+__getrandom_nocancel_nostatus (flags=1, buflen=8, buf=0x7ffff7e0b178 <tcache_key>) at ../sysdeps/unix/sysv/linux/not-cancel.h:97
+warning: 97	../sysdeps/unix/sysv/linux/not-cancel.h: No such file or directory
+ptmalloc_init () at ./malloc/arena.c:292
+warning: 292	./malloc/arena.c: No such file or directory
+296	in ./malloc/arena.c
+298	in ./malloc/arena.c
+malloc_init_state (av=0x7ffff7e04ac0 <main_arena>) at ./malloc/malloc.c:1946
+warning: 1946	./malloc/malloc.c: No such file or directory
+1949	in ./malloc/malloc.c
+1946	in ./malloc/malloc.c
+1949	in ./malloc/malloc.c
+1946	in ./malloc/malloc.c
+1949	in ./malloc/malloc.c
+1946	in ./malloc/malloc.c
+1949	in ./malloc/malloc.c
+1946	in ./malloc/malloc.c
+1949	in ./malloc/malloc.c
+#0  malloc_init_state (av=0x7ffff7e04ac0 <main_arena>) at ./malloc/malloc.c:1949
+#1  ptmalloc_init () at ./malloc/arena.c:298
+#2  0x00007ffff7cad965 in ptmalloc_init () at ./malloc/arena.c:264
+#3  __GI___libc_malloc (bytes=40) at ./malloc/malloc.c:3302
+#4  0x0000555555555244 in byte_buffer ()
+#5  0x00005555555551df in main ()
+1946	in ./malloc/malloc.c
+1949	in ./malloc/malloc.c
+1946	in ./malloc/malloc.c
+#0  malloc_init_state (av=0x7ffff7e04ac0 <main_arena>) at ./malloc/malloc.c:1946
+#1  ptmalloc_init () at ./malloc/arena.c:298
+#2  0x00007ffff7cad965 in ptmalloc_init () at ./malloc/arena.c:264
+#3  __GI___libc_malloc (bytes=40) at ./malloc/malloc.c:3302
+#4  0x0000555555555244 in byte_buffer ()
+#5  0x00005555555551df in main ()
+Continuing.
+[Inferior 1 (process 82756) exited normally]
+No stack.

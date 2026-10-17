@@ -32,11 +32,13 @@ int byte_buffer(int length){
     if(p == NULL){
         printf("Error allocating %d ints\n", length);
         return 1;
-    }
-
+    }   
+    
     for(i=0; i<length; i++){
         p[i] = i+1;
     }
+
+    // snapshot A
 
     for(i=0; i<length; i++){
         printf("%d\n",p[i]);
@@ -60,10 +62,13 @@ int byte_buffer(int length){
         p[i] = i+1;
     }
 
+    // snapshot B
+
     for(i=0; i<(new_length); i++){
         printf("%d\n", p[i]);
     }
 
     free(p);
+    // snapshot C
     return 0;
 }

@@ -28,6 +28,10 @@ src/NAME
 * -o NAME - name the file [NAME] (put any name)
 * ./NAME - run the file
 
+May also add -g -O0 to use GDB:
+* -g - includes debugging information: variable names, types, and the connection between executable instructions and the source lines. GDB uses it to show and inspect the C code.
+* -O0 - disables compiler optimization, making execution easier to follow while stepping and inspecting variab
+
 ## How to save files outputs:
 
 src/NAME | tee results/NAME_output.txt

@@ -1,0 +1,23 @@
+Starting program: /mnt/c/Users/tazom/Documents/Studies/Myself/CompSci/Repository/CompSci/src/check 
+Downloading separate debug info for system-supplied DSO at 0x7ffff7fc3000
+
+[###                                                                                                                                    ]
+[ ###                                                                                                                                   ]Cancelling download of separate debug info for system-supplied DSO at 0x7ffff7fc3000...
+
+                                                                                                                                           
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at src/just_checking.c:10
+10	    int score = 7;
+12	    score = add_bonus(score);
+#0  main () at src/just_checking.c:12
+add_bonus (points=7) at src/just_checking.c:4
+4	    int bonus = 3;
+#0  add_bonus (points=7) at src/just_checking.c:4
+#1  0x0000555555555188 in main () at src/just_checking.c:12
+Continuing.
+[Inferior 1 (process 79506) exited normally]
+No stack.
+Quit
+Quit
