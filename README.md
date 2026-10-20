@@ -17,8 +17,8 @@ Working inside WSL via VS Code terminal.
 
 ## How to run files:
 
-gcc -std=c17 -Wall -Wextra -pedantic src/FILENAME.c -o src/NAME
-src/NAME
+'gcc -std=c17 -Wall -Wextra -pedantic src/FILENAME.c -o src/NAME'
+'src/NAME'
 
 * gcc - compiler (alternative clang), use g++/clang++ for C++, 
 * -std=c17 - Compile using the C17 stabdard
@@ -34,5 +34,20 @@ May also add -g -O0 to use GDB:
 
 ## How to save files outputs:
 
-src/NAME | tee results/NAME_output.txt
+'src/NAME | tee results/NAME_output.txt'
 
+## How to run with AddressSanitizer:
+'gcc -std=c17 -Wall -Wextra -pedantic -g -O0 -fsanitize=address -fno-omit-frame-pointer tests/FILENAME.c -o tests/NAME_asan'
+'./tests/NAME_asan'
+
+* -fsanitize=address - adds checks that detect memory errors while the program runs.
+* -g - includes debugging information so reports can identify source files and lines.
+* -O0 - disables optimization, making reports easier to relate to the source code.
+* -fno-omit-frame-pointer - helps produce clearer call stacks.
+
+## To run and save both normal output and error messages:
+
+'./tests/NAME_asan 2>&1 | tee results/NAME_asan_output.txt'
+
+* 2>&1 - combines error output with normal output so both reach tee. This captures ASan reports, which are written to error output.
+* tee - displays the combined output and saves it to the specified file.
