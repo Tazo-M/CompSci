@@ -51,3 +51,52 @@ May also add -g -O0 to use GDB:
 
 * 2>&1 - combines error output with normal output so both reach tee. This captures ASan reports, which are written to error output.
 * tee - displays the combined output and saves it to the specified file.
+
+## To inspect your kernel:
+
+`git remote -v` - to show the repository's remote address
+* remote - work with connections to other copies of the repository
+* -v - verbose [include the address, rather than only remote names]
+
+`git rev-parse --show-toplevel` - to show the current path of the repository
+
+`git rev-parse HEAD` - print the current commit's full identifier
+* rev-parse - interpret a revision name and resolve it to an identifier
+* Git's reference to your currently checked-out commit
+
+`git tag --points-at HEAD` - lists tags attached to the current commit
+* tag - work with named labels for particular points in repository history
+* --points-at - filter the list to tags pointing at a specified object
+* HEAD - use your current commit
+
+`git status --short` - show local changes in a compact format
+* status - report differences between your files and current commit
+* --short - use compact listing 
+
+`uname -m` - show the current system's machine architecture
+* uname - display system inforamtion
+* -m - display the mahcine architecture, such as x86_64, aarch64...
+
+`gcc --version`
+`ld --version`
+`make --version`
+
+
+## Ripgrep:
+
+Searches in files for whatever pattern it is given. Returns a line if it finds one
+
+`rg 'word' FILENAME`
+* 'word\w+' - the word followed by a letter
+* 'word\w*' - works same as just word, but highlights if it isn't an exact match
+
+`rg 'fn function-name\('` 
+one may also optionally add the deirectory name at the end, otherwise ripgrep will search the entire directory
+
+## Git Grep
+
+Look for patterns in tracked files in the work tree.
+
+`git grep -w -n 'text'`
+* -w - match the pattern only at word boundary
+* -n - prefix the line number to matching lines
