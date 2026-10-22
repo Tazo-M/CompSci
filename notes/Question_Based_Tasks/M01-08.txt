@@ -1,0 +1,53 @@
+1. QUESTION:
+When you pass an integer array to a function, what does the function receive? Why doesn't sizeof on that parameter give the original array's size?
+
+ANSWER:
+The function receives a pointer to the FIRST element of the array. Therefore, sizeof on that parameter gives the size of the pointer-for example, 8 bytes-not the size of the original array.
+
+
+2. QUESTION:
+How do signed int and unsigned int differ in the values they can represent? Is plain char guaranteed to be signed? Give an example illustrating a range difference.
+
+ANSWER:
+Signed integers can be negative, whereas unsigned integers are nonnegative. Unsigned integers can have approximately twice as high a maximum because the range that would represent negative values instead expands the nonnegative range.
+
+For example, -128 to 127 and 0 to 255 each contain 256 distinct values. The unsigned maximum is approximately, rather than exactly, twice the signed maximum.
+
+Plain char can be signed or unsigned. Its signedness is determined when the program is compiled, according to the compiler/platform and relevant compiler settings. Assigning a different value does not change its signedness.
+
+
+3. QUESTION:
+In your buffer program, when does the allocated memory become available, and when does its lifetime end? Using your code, explain why having a pointer afterward doesn't mean the allocation still exists.
+
+ANSWER:
+The allocated memory becomes available when malloc succeeds, meaning p is not NULL. Its lifetime ends when I free it.
+
+The pointer may still appear to hold the old address, and inspecting that memory might even show some of the old values, as I saw in GDB. However, the allocation has been released. Accessing that memory through the pointer afterward is invalid and leads to undefined behavior.
+
+
+4. QUESTION:
+Why might sizeof a struct be greater than the sum of its members' sizes? Give a small struct example that could contain padding.
+
+ANSWER:
+C allows the compiler to add padding bytes to a struct. For example, a struct with two ints and two chars has members totaling 10 bytes if an int is 4 bytes on my system and a char is 1 byte. However, sizeof the whole struct might be 16 bytes because the compiler added padding.
+
+
+5. QUESTION:
+How can you pass a function to another function so that the receiving function can call it? Give a small example showing that relationship.
+
+ANSWER:
+You can pass a function using a function pointer. To declare it, you write the function's return type, then an asterisk and the pointer's name inside parentheses, followed by the types of arguments the function accepts.
+
+For example, a receiving function could have the parameters:
+
+    int (*p)(int, int), int a, int b
+
+Inside that receiving function, we can call the supplied function using:
+
+    p(a, b);
+
+From main, we could call the receiving function like this:
+
+    func(name_of_suitable_function, 1, 2);
+
+The supplied function must match the pointer's type: in this example, it accepts two ints and returns an int.
